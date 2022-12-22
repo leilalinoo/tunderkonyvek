@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(kepek/hatter.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+main {
+  width: 80%;
+  height: 80%;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgb(248, 230, 197);
+  padding: 10px;
+  text-align: justify;
+  font-family: "Kalam";
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "h h h h"
+    "n n n n"
+    "a a a as"
+    "f f f f";
+}
+*{
+    box-sizing: border-box;
+}
+#indexmain {
+  text-align: center;
+}
+article {
+  grid-area: a;
+}
+header {
+  grid-area: h;
+}
+header,
+footer {
+  font-family: "Sevillana";
+  text-align: center;
+  font-size: 200%;
+  padding: 2%;
+}
+nav {
+  padding: 2%;
+  grid-area: n;
+  width: 100%;
+}
+#menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#menu a {
+  text-decoration: none;
+  padding: 5px;
+  color: blue;
+}
+#menu a:visited {
+  color: blue;
+}
+#menu a:hover {
+  color: rgb(144, 0, 255);
+}
+#menu a:active {
+  color: red;
+}
+
+#menu li {
+  list-style-type: none;
+  text-align: center;
+}
+.konyvek {
+  width: 100%;
+}
+.cim {
+  font-family: "Pacifico";
+  font-size: 20px;
+  text-align: center;
+}
+.cim a {
+  text-decoration: none;
+  color: rgb(255, 0, 51);
+}
+aside {
+  grid-area: as;
+  margin-left: 10px;
+  font-size: 15px;
+  text-align: right;
+}
+footer {
+  grid-area: f;
+}
+/*ACOTAR OLDAL*/
+#acotarbody {
+  background-image: url(kepek/acotar/acotar-wall.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.feyre {
+  width: 40%;
+  align-items: center;
+  margin-left: 30%;
+}
+/*CC OLDAL*/
+#ccbody {
+  background-image: url(kepek/cc/cc-wall.jpg);
+  mask-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.bryce {
+  float: left;
+  padding-right: 5px;
+  width: 40%;
+}
+.f {
+  clear: both;
+}
+.hunt {
+  float: right;
+  padding-left: 5px;
+  width: 40%;
+}
+.f {
+  clear: both;
+}
+/*TOG OLDAL*/
+#togbody {
+  background-image: url(kepek/tog/tog-wall.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "h h"
+      "n n"
+      "a as"
+      "f f";
+  }
+  #menu {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 400px) {
+    main {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "h"
+        "n"
+        "a"
+        "as"
+        "f";
+    }
+  }
+  #menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
