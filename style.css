@@ -23,8 +23,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "h h h h"
-    "n n n n"
-    "a a a as"
+    "n a a as"
     "f f f f";
 }
 *{
@@ -53,7 +52,7 @@ nav {
 }
 #menu {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 #menu a {
   text-decoration: none;
@@ -69,10 +68,14 @@ nav {
 #menu a:active {
   color: red;
 }
-
 #menu li {
   list-style-type: none;
   text-align: center;
+  margin: 3px;
+  padding: 5px;
+  background-color: rgb(253, 116, 116);
+  border: 1px solid black;
+  border-radius: 20px;
 }
 .konyvek {
   width: 100%;
@@ -94,6 +97,13 @@ aside {
 }
 footer {
   grid-area: f;
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 114, 114);
+  border-radius: 10px;
 }
 /*ACOTAR OLDAL*/
 #acotarbody {
@@ -144,11 +154,15 @@ footer {
     grid-template-areas:
       "h h"
       "n n"
-      "a as"
+      "a a"
+      "as as"
       "f f";
   }
   #menu {
     grid-template-columns: 1fr 1fr;
+  }
+  aside{
+    text-align: center;
   }
 
   @media only screen and (max-width: 400px) {
@@ -161,9 +175,11 @@ footer {
         "as"
         "f";
     }
-  }
-  #menu {
-    display: grid;
-    grid-template-columns: 1fr;
+    #menu{
+      grid-template-columns: 1fr;
+    }
+    aside{
+      text-align: center;
+    }
   }
 }
